@@ -1,0 +1,427 @@
+.fv {
+    height: 800px;
+    display: flex;
+
+    .fv-ttl {
+        max-width: $layout-width-inner_col-8_1;
+        width: 100%;
+        background: url(../images/main.jpg) center/cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .fv-nav {
+        max-width: $layout-width-inner_col-4;
+        width: 100%;
+        background: $color-green;
+
+        li {
+
+            text-align: right;
+        }
+
+        a {
+            font-size: $txt-lx;
+            font-family: $font-tcm;
+            color: $color-gray;
+
+            @include mq('sp') {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+
+h1 {
+    font-size: 8vw;
+    font-family: $font-tcm;
+    display: inline-block;
+    margin-left: 4vw;
+    color: $color-white;
+    letter-spacing: 1px;
+    font-weight: 100;
+
+    span {
+        font-weight: bold;
+    }
+}
+
+.fv-nav {
+    display: flex;
+    align-items: center;
+}
+
+.fv-nav_inner {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    /* width: 100%; */
+    max-width: 28vw;
+    width: 100%;
+    justify-content: flex-end;
+
+
+    .inner {
+        margin-right: 4em;
+
+        @include mq('sp') {
+            margin-right: 0;
+        }
+
+        .ttl {
+            @include mq('sp') {
+                display: none;
+            }
+        }
+
+        h2 {
+            margin-bottom: 2vw
+        }
+
+        ul {
+            line-height: 3vw;
+
+            @include mq('sp') {
+                line-height: 9vw;
+                padding-right: .4em
+            }
+        }
+    }
+}
+
+.scroll {
+    width: 34vw;
+    height: 100px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding-left: 2vw;
+    margin: -4em 0 0 auto;
+    z-index: 2;
+    position: relative;
+    color: $color-gray;
+    font-size: $txt-lx;
+}
+
+.about {
+    margin-top: 200px;
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        height: 23em;
+        width: 80%;
+        background: url(../images/aboutme_bg.jpg) center/cover;
+        position: absolute;
+        right: 0;
+        z-index: -1;
+        opacity: .2;
+    }
+
+    h2 {
+        margin-right: 1em;
+        padding-top: 4vw;
+        margin-bottom: 1.2em;
+
+        @include mq('sp') {
+            margin-right: 0;
+        }
+    }
+
+    .about-img {
+        width: 350px;
+        height: 350px;
+
+        @include mq('sp') {
+            width: 60%;
+            height: auto;
+            margin-bottom: 5vw;
+        }
+    }
+
+    .inner {
+        padding-left: 8em;
+
+        @include mq('tab') {
+            padding: 0 1em;
+        }
+    }
+
+    .about-profile {
+        display: flex;
+
+        @include mq('sp') {
+            display: block;
+        }
+    }
+
+    .about-resume {
+        font-size: 14px;
+        margin-left: 8em;
+
+        @include mq('sp') {
+            margin-left: 0;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            margin-bottom: .3em;
+
+            @include mq('sp') {
+                display: block;
+            }
+
+            &:nth-child(4) {
+                span {
+                    display: block;
+                }
+            }
+
+            p:first-child {
+                font-family: $font-tcm;
+                width: 6em
+            }
+        }
+
+    }
+
+    .about-resume_career {
+        margin-top: 5vw;
+
+        h3 {
+            font-family: $font-tcm;
+        }
+
+        ul {
+            margin-top: 2vw;
+
+            li::before {
+                content: "-";
+                margin-right: 1em;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    .about-skils {
+        margin-right: 5em;
+        margin-top: 10vw;
+
+        &>ul {
+            display: flex;
+            justify-content: space-between;
+
+            @include mq('sp') {
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+}
+
+
+.works {
+    margin-top: 20vw;
+
+    .inner {
+        padding-left: 8em;
+
+        @include mq('tab') {
+            padding-left: 1em
+        }
+
+        @include mq('sp') {
+            padding: 0 1em
+        }
+    }
+
+    h2 {
+        text-align: left;
+    }
+
+    .works-list_scroll {
+        width: 100%;
+    }
+
+    .works-list>section {
+        display: flex;
+        margin-top: 5vw;
+
+        @include mq('sp') {
+            display: block;
+            margin: 19vw 0;
+        }
+
+        h3 {
+            font-family: $font-tcm;
+
+            @include mq('sp') {
+                font-size: 9vw;
+            }
+
+            &::before {
+                content: "";
+                display: block;
+                background: $color-txt;
+                height: 1px;
+                width: 16em;
+
+                @include mq('sp') {
+                    width: 100%;
+                }
+            }
+        }
+
+        ul {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin-top: 2vw;
+
+            @include mq('sp') {
+                display: block;
+            }
+
+            li {
+                width: calc(100% / 3 - 20px);
+
+                @include mq('sp') {
+                    width: 100%;
+                    margin-bottom: 10vw;
+                }
+
+                img {
+                    height: 230px;
+                    object-fit: contain;
+                }
+
+                .works-ttl {
+                    font-weight: bold;
+                }
+
+                p:nth-child(3) {
+                    color: $color-gray
+                }
+            }
+
+        }
+
+    }
+}
+
+.personal-works {
+    margin-top: 20vw;
+
+    h2 {
+        margin-bottom: 8vw;
+    }
+
+    .inner {
+        padding: 0 8em;
+
+        @include mq('tab') {
+            padding: 0 1em;
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @include mq('sp') {
+            display: flex;
+        }
+
+        li {
+            width: calc(100% / 5 - 20px);
+
+            @include mq('sp') {
+                width: 100%;
+            }
+
+
+            img {
+                // height: 110px;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.content-img {
+    width: 100%;
+    height: 400px;
+    margin-top: 16vw;
+    background: url(../images/personal_works_bg.jpg) no-repeat center/cover;
+
+    @include mq('sp') {
+        height: 180px;
+    }
+}
+
+
+.contact {
+    margin-top: 10vw;
+    display: flex;
+
+    @include mq('sp') {
+        display: block;
+    }
+
+    .ttl {
+        @include mq('tab') {
+            font-size: 3em
+        }
+    }
+
+    .contact-ttl {
+        padding-left: 8vw;
+        background: url(../images/contact.jpg) no-repeat center/cover;
+        padding: 5vw;
+        width: 50%;
+        text-align: left;
+        color: $color-white;
+
+        @include mq('sp') {
+            width: 100%;
+
+        }
+    }
+
+    .contact-list {
+        width: 50%;
+
+        @include mq('sp') {
+            width: 100%;
+
+        }
+
+        a {
+            height: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: $color-green;
+
+            @include mq('sp') {
+                height: 80px
+            }
+
+            &:first-child {
+                background: $color-blue;
+            }
+        }
+    }
+}
+
+footer {
+    background: #313131;
+    color: $color-white;
+    text-align: center;
+}

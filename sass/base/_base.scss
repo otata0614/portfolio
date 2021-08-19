@@ -1,0 +1,45 @@
+body {
+    font-family: 'NotoSansCJKjp', sans-serif;
+    color: $color-txt;
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+.br {
+    display: block;
+}
+
+
+
+
+//PC
+@media print,
+screen and (min-width: 767px) {
+    ._sp {
+        display: none;
+    }
+
+    body {
+        width: 100%;
+    }
+
+}
+
+
+
+@media screen and (max-width: 767px) {
+    ._pc {
+        display: none;
+    }
+
+    .sp-br {
+        display: inline-block;
+    }
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+    }
+}

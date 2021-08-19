@@ -1,0 +1,22 @@
+$layout-width-inner-max: 1064px;
+$layout-width-inner-mid: 700px;
+$layout-width-inner-min: 270px;
+
+$layout-width-inner_col-8: 707px;
+$layout-width-inner_col-7: 615px;
+$layout-width-inner_col-6: 525px;
+$layout-width-inner_col-5: 434px;
+$layout-width-inner_col-4: 344px;
+$layout-width-inner_col-8_1: 72vw;
+$layout-width-inner_col-5_1: 450px;
+$layout-width-inner_col-4: 28vw;
+
+$breakpoints: ("sp": "screen and (max-width: 767px)",
+  "tab": "screen and (max-width: #{$layout-width-inner-max - 1px})",
+  "pc": "screen and (min-width: #{$layout-width-inner-max})"
+);
+
+// パーツ
+$layout-logo: 230px;
+$layout-btn: 200px;
+$layout-border: 20px;

@@ -1,0 +1,49 @@
+@font-face {
+        font-family: 'NotoSansCJKjp';
+        font-style: normal;
+        font-weight: 400;
+        src: local("Noto Sans CJK JP Regular"),
+                url(../font/NotoSansCJKjp-Regular.woff2) format('woff2'),
+                url(../font/NotoSansCJKjp-Regular.woff) format('woff');
+}
+
+@font-face {
+        font-family: 'NotoSansCJKjp';
+        font-style: normal;
+        font-weight: 500;
+        src: local("Noto Sans CJK JP Medium"),
+                url(../font/NotoSansCJKjp-Medium.woff2) format('woff2'),
+                url(../font/NotoSansCJKjp-Medium.woff) format('woff');
+}
+
+@font-face {
+        font-family: 'TCM';
+        font-style: normal;
+        font-weight: 400;
+        src: url(../font/TCM.woff2) format('woff2'),
+                url(../font/TCM.woff) format('woff');
+}
+
+$font-noto: 'NotoSansCJKjp',
+sans-serif;
+$font-gen: source-han-sans-japanese,
+'NotoSansCJKjp',
+sans-serif;
+$font-tcm: 'TCM',
+sans-serif;
+// 源ノ角はfont-weight: 700;
+
+// 見出し
+$ttl: 60px;
+
+// テキスト以下
+$txt-lx: 20px;
+$txt-md: 15px;
+$txt-nor: 12px;
+$txt-min: 10px;
+
+
+.txt-en {
+        font-size: $txt-min;
+        font-family: $font-tcm;
+}
