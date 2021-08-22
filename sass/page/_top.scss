@@ -4,7 +4,36 @@ a[target="_blank"] {
         display: inline-block;
         width: 10px;
         height: 10px;
+        margin-left: .5vw;
         background: url(../images/blank.png) no-repeat center/contain;
+    }
+}
+
+.about-resume>ul>li span a[target="_blank"] {
+    &::after {
+        display: none;
+    }
+}
+
+.tw {
+    margin-left: 1vw;
+}
+
+.note img {
+    width: 25px;
+    margin-top: -3px;
+}
+
+.about-resume li p {
+    display: flex;
+}
+
+.fa-twitter-square {
+    &::before {
+        font-family: "Font Awesome 5 Free";
+        content: '\f099';
+        font-weight: 900;
+
     }
 }
 
@@ -201,6 +230,10 @@ h1 {
 
             a {
                 color: $color-blue;
+
+                &::after {
+                    margin-left: 0;
+                }
             }
         }
 
@@ -347,7 +380,7 @@ h1 {
                     &::before {
                         content: "";
                         display: block;
-                        background: url(../images/icon/WordPress.png) no-repeat center/contain;
+                        background: url(../images/icon/wp.png) no-repeat center/contain;
 
 
                     }
@@ -357,7 +390,7 @@ h1 {
                     &::before {
                         content: "";
                         display: block;
-                        background: url(../images/icon/GitHub.png) no-repeat center/contain;
+                        background: url(../images/icon/github.png) no-repeat center/contain;
                     }
                 }
 
@@ -600,7 +633,7 @@ h1 {
 .personal-works-thumbnail {
     display: flex;
 
-    @include mq('tab') {
+    @include mq('sp') {
         display: block;
     }
 }
@@ -609,7 +642,7 @@ h1 {
     width: calc(100% / 3 - 20px);
     height: 300px;
 
-    @include mq('tab') {
+    @include mq('sp') {
         width: 100%;
         height: 100%;
         margin-bottom: 1vw;
@@ -642,6 +675,20 @@ h1 {
         }
     }
 
+    .tw {
+        margin-left: 0;
+    }
+
+    .tw i {
+        margin-right: .6vw;
+    }
+
+    .note img {
+        width: 30px;
+        margin-top: -2px;
+        margin-left: 1vw
+    }
+
     .contact-ttl {
         padding-left: 8vw;
         background: url(../images/contact.jpg) no-repeat center/cover;
@@ -671,6 +718,11 @@ h1 {
             align-items: center;
             justify-content: center;
             background: $color-green;
+            transition: all .3s;
+
+            &:hover {
+                background: #eee;
+            }
 
             @include mq('sp') {
                 height: 80px
@@ -678,6 +730,10 @@ h1 {
 
             &:first-child {
                 background: $color-blue;
+
+                &:hover {
+                    background: #eee;
+                }
             }
         }
     }
