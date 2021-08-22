@@ -1,3 +1,18 @@
+a[target="_blank"] {
+    &::after {
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: url(../images/blank.png) no-repeat center/contain;
+    }
+}
+
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
+
 .fv {
     height: 800px;
     display: flex;
@@ -25,6 +40,18 @@
             font-size: $txt-lx;
             font-family: $font-tcm;
             color: $color-gray;
+            margin-bottom: -2px;
+            bottom: 5px;
+
+            &::after {
+                bottom: 5px;
+            }
+
+            &:hover {
+                &::after {
+                    bottom: 5px;
+                }
+            }
 
             @include mq('sp') {
                 font-size: 16px;
@@ -93,7 +120,7 @@ h1 {
 
 .scroll {
     width: 34vw;
-    height: 100px;
+    height: 80px;
     background: #fff;
     display: flex;
     align-items: center;
@@ -114,7 +141,7 @@ h1 {
         display: block;
         height: 23em;
         width: 80%;
-        background: url(../images/aboutme_bg.jpg) center/cover;
+        background: url(../images/aboutme_bg.jpeg) no-repeat center/100%;
         position: absolute;
         right: 0;
         z-index: -1;
@@ -162,8 +189,19 @@ h1 {
         font-size: 14px;
         margin-left: 8em;
 
+        width: 60%;
+
         @include mq('sp') {
             margin-left: 0;
+            width: 100%;
+        }
+
+        .about-resume_text {
+            margin-top: 2vw;
+
+            a {
+                color: $color-blue;
+            }
         }
 
         li {
@@ -212,12 +250,208 @@ h1 {
         margin-right: 5em;
         margin-top: 10vw;
 
+        @include mq('sp') {
+            margin-right: 0;
+        }
+
         &>ul {
             display: flex;
             justify-content: space-between;
 
             @include mq('sp') {
-                flex-wrap: wrap;
+                display: block;
+            }
+
+            &>li {
+                width: 49%;
+                background: #eee;
+                padding: 2vw;
+
+                @include mq('sp') {
+                    width: 100%;
+                }
+
+                dt {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 2vw;
+                }
+            }
+
+            ul li {
+                display: flex;
+                align-items: center;
+                margin-bottom: 1vw;
+
+                &::before {
+                    margin-right: 1vw;
+                    width: 50px;
+                    height: 50px;
+                }
+
+                span {
+                    color: $color-green;
+                    font-size: 25px;
+                    margin-left: 1vw;
+                }
+
+                &.other-tools {
+                    display: block;
+
+                    dt {
+                        margin-top: 3vw;
+                    }
+                }
+            }
+        }
+
+        .design-tools {
+            ul li {
+                &:first-child {
+                    &::before {
+                        content: "";
+                        display: block;
+                        background: url(../images/icon/photoshop.png) no-repeat center/contain;
+
+
+                    }
+                }
+
+                &:nth-child(2) {
+                    &::before {
+                        content: "";
+                        display: block;
+                        background: url(../images/icon/illustrator.png) no-repeat center/contain;
+
+
+                    }
+                }
+
+                &:nth-child(3) {
+                    &::before {
+                        content: "";
+                        display: block;
+                        background: url(../images/icon/xd.png) no-repeat center/contain;
+
+
+                    }
+                }
+            }
+        }
+
+        .other-tools {
+            ul li {
+                width: 100%;
+
+                &:first-child {
+                    &::before {
+                        content: "";
+                        display: block;
+                        background: url(../images/icon/WordPress.png) no-repeat center/contain;
+
+
+                    }
+                }
+
+                &:nth-child(2) {
+                    &::before {
+                        content: "";
+                        display: block;
+                        background: url(../images/icon/GitHub.png) no-repeat center/contain;
+                    }
+                }
+
+                &:nth-child(3) {
+                    &::before {
+                        content: "";
+                        display: block;
+                        background: url(../images/icon/ga.png) no-repeat center/contain;
+                    }
+                }
+            }
+        }
+
+        .coding-tools {
+            ul li {
+                &:first-child {
+                    &::before {
+                        content: "";
+                        display: block;
+                        background: url(../images/icon/html.png) no-repeat center/contain;
+
+
+                    }
+                }
+
+                &:nth-child(2) {
+                    &::before {
+                        content: "";
+                        display: block;
+                        background: url(../images/icon/css.png) no-repeat center/contain;
+
+
+                    }
+                }
+
+                &:nth-child(3) {
+                    &::before {
+                        content: "";
+                        display: block;
+                        background: url(../images/icon/scss.png) no-repeat center/contain;
+
+
+                    }
+                }
+
+                &:nth-child(4) {
+                    &::before {
+                        content: "";
+                        display: block;
+                        background: url(../images/icon/jquery.png) no-repeat center/contain;
+
+
+                    }
+                }
+
+                &:nth-child(5) {
+                    &::before {
+                        content: "";
+                        display: block;
+                        background: url(../images/icon/js.png) no-repeat center/contain;
+
+
+                    }
+                }
+
+                &:nth-child(6) {
+                    &::before {
+                        content: "";
+                        display: block;
+                        background: url(../images/icon/php.png) no-repeat center/contain;
+
+
+                    }
+                }
+
+                &:nth-child(7) {
+                    &::before {
+                        content: "";
+                        display: block;
+                        background: url(../images/icon/vue.png) no-repeat center/contain;
+
+
+                    }
+                }
+
+                &:last-child {
+                    &::before {
+                        content: "";
+                        display: block;
+                        background: url(../images/icon/react.png) no-repeat center/contain;
+
+
+                    }
+                }
             }
         }
     }
@@ -227,6 +461,7 @@ h1 {
 
 .works {
     margin-top: 20vw;
+    margin-bottom: 20vw;
 
     .inner {
         padding-left: 8em;
@@ -246,10 +481,18 @@ h1 {
 
     .works-list_scroll {
         width: 100%;
+        margin-top: 2vw;
+    }
+
+    .works-list {
+        transform: translateX(10vw);
+
+        @include mq('sp') {
+            transform: translateX(0);
+        }
     }
 
     .works-list>section {
-        display: flex;
         margin-top: 5vw;
 
         @include mq('sp') {
@@ -315,7 +558,7 @@ h1 {
 }
 
 .personal-works {
-    margin-top: 20vw;
+    margin-top: 15vw;
 
     h2 {
         margin-bottom: 8vw;
@@ -354,6 +597,25 @@ h1 {
     }
 }
 
+.personal-works-thumbnail {
+    display: flex;
+
+    @include mq('tab') {
+        display: block;
+    }
+}
+
+.swiper-container {
+    width: calc(100% / 3 - 20px);
+    height: 300px;
+
+    @include mq('tab') {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 1vw;
+    }
+}
+
 .content-img {
     width: 100%;
     height: 400px;
@@ -383,8 +645,9 @@ h1 {
     .contact-ttl {
         padding-left: 8vw;
         background: url(../images/contact.jpg) no-repeat center/cover;
-        padding: 5vw;
-        width: 50%;
+        padding: 3vw 10vw;
+        width: 70%;
+        height: 400px;
         text-align: left;
         color: $color-white;
 
@@ -421,7 +684,122 @@ h1 {
 }
 
 footer {
+    margin-top: 5vw;
     background: #313131;
     color: $color-white;
     text-align: center;
+
+    h1 {
+        font-size: 6vw;
+        letter-spacing: 3px;
+
+        @include mq('sp') {
+            padding: 5vw;
+        }
+
+        a,
+        a:hover,
+        a:visited {
+            color: $color-white;
+        }
+    }
+
+    nav {
+        background: #eee;
+        padding: 2vw 0;
+
+        ul {
+            max-width: $layout-width-inner-max;
+            width: 100%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @include mq('sp') {
+                margin-bottom: -2vw;
+            }
+
+            li {
+                @include mq('sp') {
+                    margin-bottom: 2vw;
+                }
+            }
+
+            @include mq('sp') {
+                display: block;
+            }
+
+        }
+    }
+}
+
+nav {
+    ul li {
+        a {
+            position: relative;
+            display: inline-block;
+            text-decoration: none;
+
+            &::after {
+                position: absolute;
+                bottom: -1px;
+                left: 0;
+                content: '';
+                width: 100%;
+                height: 2px;
+                background: #333;
+                transform: scale(0, 1);
+                transform-origin: left top;
+                transition: transform .3s;
+            }
+
+            &:hover {
+                &::after {
+                    transform: scale(1, 1);
+                }
+
+            }
+        }
+    }
+}
+
+
+.scroll {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* ボタンのテキスト */
+.btn__text {
+    position: absolute;
+    padding: 2vw;
+    left: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+/* ボタンのテキスト(デフォルトのテキスト) */
+.btn__text:nth-child(1) {
+    top: 0;
+}
+
+/* ボタンのテキスト(隠れているテキスト) */
+.btn__text:nth-child(2) {
+    top: -100%;
+    background: $color-green;
+    color: #fff;
+}
+
+/* ボタンホバーアクション */
+.scroll:hover .btn__text:nth-child(1) {
+    top: 100%;
+}
+
+.scroll:hover .btn__text:nth-child(2) {
+    top: 0;
 }
